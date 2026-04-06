@@ -35,5 +35,6 @@ CREATE TABLE IF NOT EXISTS chat_history(
     created_at TIMESTAMPTZ DEFAULT now()
 );
 
+--creatte index base on session_id
 CREATE INDEX IF NOT EXISTS idx_session_id
     ON chat_history(session_id);

@@ -20,11 +20,12 @@ services:
   #Container 2: Streamlit app
   app:
     build:
-      context:
+      context: .
       dockerfile: docker/Dockerfile
-    ports: "8501:8501"
+    ports:
+      - "8501:8501"
     environment:
-      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_HOST: db
@@ -33,7 +34,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
-      volumes:
-        - ./app:/multimodal-doc-assistant/app
+    volumes:
+      - ./app:/multimodal-doc-assistant/app
 volumes:
   pgdata:

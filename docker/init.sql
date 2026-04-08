@@ -20,11 +20,11 @@ CREATE TABLE IF NOT EXISTS document_chunks(
 -- HSNW (Hierarchical Navigable Small World): a high-performance indexing algorithm used for vector similarity search, primarily through the pgvector extension
 CREATE INDEX IF NOT EXISTS idx_embedding_hsnw
     ON document_chunks
-    USING hsnw (embedding vector_cosine_ops);
+    USING hnsw (embedding vector_cosine_ops);
 
 -- Index for filter base on file
 CREATE INDEX IF NOT EXISTS idx_source_file
-    ON document_chunks (source_file)
+    ON document_chunks (source_file);
 
 -- chat memory
 CREATE TABLE IF NOT EXISTS chat_history(

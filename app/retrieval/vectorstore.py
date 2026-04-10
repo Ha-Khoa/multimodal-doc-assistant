@@ -2,11 +2,18 @@
 pgVector setup using LangChain's PGVector integration
 """
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 from langchain_postgres.vectorstores import PGVector
 from langchain_openai import OpenAIEmbeddings
 from langchain_core.documents import Document
 
 COLLECTION_NAME = "doc_chunks"
+
+# Debug: check if API key is loaded
+api_key = os.environ.get('OPENAI_API_KEY', 'NOT_FOUND')
+print(f"DEBUG: API Key loaded: {api_key[:20]}..." if api_key != 'NOT_FOUND' else "DEBUG: API Key NOT FOUND")
 
 """
 Connect to the PostgreSQL
@@ -19,7 +26,7 @@ CONNECTION_STRING = (
     f"{os.environ['POSTGRES_DB']}"
 )
 
-embeddings = OpenAIEmbeddings(model="text_embedding-3-small")       #return vector 1536 dimensions
+embeddings = OpenAIEmbeddings(model="text-embedding-3-small")       #return vector 1536 dimensions
 
 def get_vectorstore() -> PGVector:                      #return PGVector object for working with vector DB
     return PGVector(

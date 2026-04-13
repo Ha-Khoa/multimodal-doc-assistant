@@ -12,8 +12,8 @@ from langchain_core.documents import Document
 COLLECTION_NAME = "doc_chunks"
 
 # Debug: check if API key is loaded
-api_key = os.environ.get('OPENAI_API_KEY', 'NOT_FOUND')
-print(f"DEBUG: API Key loaded: {api_key[:20]}..." if api_key != 'NOT_FOUND' else "DEBUG: API Key NOT FOUND")
+#api_key = os.environ.get('OPENAI_API_KEY', 'NOT_FOUND')
+#print(f"DEBUG: API Key loaded: {api_key[:20]}..." if api_key != 'NOT_FOUND' else "DEBUG: API Key NOT FOUND")
 
 """
 Connect to the PostgreSQL

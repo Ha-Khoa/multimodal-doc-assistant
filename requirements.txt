@@ -1,0 +1,35 @@
+# ============================================================
+# Core PDF parsing
+# ============================================================
+pymupdf==1.26.1                  # fitz — extract text + render pages as images
+
+# ============================================================
+# LangChain ecosystem
+# ============================================================
+langchain==0.3.25                # core chain + memory abstractions
+langchain-openai==0.3.16         # ChatOpenAI + OpenAIEmbeddings
+langchain-postgres==0.0.17       # PGVector integration
+langchain-community==0.3.23      # ConversationalRetrievalChain, extra loaders
+langchain-text-splitters==0.3.8  # RecursiveCharacterTextSplitter
+
+# ============================================================
+# OpenAI API
+# ============================================================
+openai==1.91.0                   # GPT-4o Vision + text-embedding-3-small
+
+# ============================================================
+# Database
+# ============================================================
+psycopg[binary]==3.2.9           # PostgreSQL driver (psycopg3, required by langchain-postgres)
+pgvector==0.3.6                  # Python bindings for pgvector types
+sqlalchemy==2.0.48               # ORM used internally by LangChain PGVector
+
+# ============================================================
+# UI
+# ============================================================
+streamlit==1.45.1                # chat interface + file uploader
+
+# ============================================================
+# Utilities
+# ============================================================
+python-dotenv==1.1.0             # load .env file into os.environ

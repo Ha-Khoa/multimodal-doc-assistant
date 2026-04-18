@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is Khoa's GPA?",
+    "expected": "2.3",
+    "source_file": "career-report-khoa copy.pdf"
+  },
+  {
+    "question": "What internship did Khoa complete?",
+    "expected": "Saltlux Vietnam",
+    "source_file": "career-report-khoa copy.pdf"
+  },
+  {
+    "question": "What computer vision framework did Khoa use at his internship?",
+    "expected": "YOLO",
+    "source_file": "career-report-khoa copy.pdf"
+  },
+  {
+    "question": "What is Javier's GPA?",
+    "expected": "1.7",
+    "source_file": "javier-briceno.pdf"
+  },
+  {
+    "question": "What city does Javier live in?",
+    "expected": "Siegen",
+    "source_file": "javier-briceno.pdf"
+  },
+  {
+    "question": "What database does Javier use in his projects?",
+    "expected": "PostgreSQL",
+    "source_file": "javier-briceno.pdf"
+  },
+  {
+    "question": "What is Khoa's strongest subject grade?",
+    "expected": "1.3",
+    "source_file": "career-report-khoa copy.pdf"
+  },
+  {
+    "question": "Which course does the report recommend Khoa pay for first?",
+    "expected": "PyTorch",
+    "source_file": "career-report-khoa copy.pdf"
+  },
+  {
+    "question": "What languages does Khoa speak?",
+    "expected": "Vietnamese",
+    "source_file": "career-report-khoa copy.pdf"
+  },
+  {
+    "question": "What workflow tool does Javier use for ETL pipelines?",
+    "expected": "n8n",
+    "source_file": "javier-briceno.pdf"
+  }
+]

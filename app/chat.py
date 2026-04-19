@@ -28,7 +28,7 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
         session_store[session_id] = ChatMessageHistory()
     return session_store[session_id]
 
-def build_chain(source_file: str | None = None):
+def build_chain(source_file: str | None = None, subject: str | None = None):
     """
     Build a conversational retrieval chain
     If source_file given, filter chunks to that file only
@@ -36,8 +36,17 @@ def build_chain(source_file: str | None = None):
     store = get_vectorstore()
 
     search_kwargs = {"k": 5}
-    if source_file:
+    if source_file and subject:
+        search_kwargs["filter"] = {
+            "$and": [
+                {"source_file": {"$eq":source_file}},
+                {"subject": {"$eq": subject}}
+            ]
+        }
+    elif source_file:
         search_kwargs["filter"] = {"source_file": {"$eq":source_file}}
+    elif subject:
+        search_kwargs["filter"] = {"subject": {"$eq": subject}}
     
     retriever = store.as_retriever(search_kwargs = search_kwargs)
 

@@ -15,6 +15,7 @@ class PageData:
     image_b64: str      #base64-encoded PNG of the full page
 
 # Having the directory path to pdf, return a list (PageData) of a page, resolution while rendering 150 
+# When ingest slide, call dpi=200 
 def parse_pdf(pdf_path: str, dpi: int = 150) -> list[PageData]:     
     """
     Extract text and render each page as an image

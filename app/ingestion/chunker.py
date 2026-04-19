@@ -53,3 +53,27 @@ def chunk_image_description(description: str, source_file: str, page_number:int)
             }
         )
     ]
+
+def chunk_text_slides(text: str, source_file: str, page_number: int, subject:str) -> list[Document]:
+    """
+    for Slides have less text per page than reports - smaller chunks size needed
+    split slide text into smaller chunk
+    """
+    splitter = RecursiveCharacterTextSplitter(
+        chunk_size = 400,
+        chunk_overlap = 50,
+    )
+    chunks = splitter.split_text(text)
+    return [    
+        Document(
+            page_content = chunk,
+            metadata = {
+                "source_file": source_file,
+                "page_number": page_number,
+                "chunk_type": "text",
+                "doc_type": "slide",        #metadata distingush type of document
+                "subject": subject,
+            }
+        )
+        for chunk in chunks if chunk.strip()
+    ]

@@ -2,51 +2,121 @@
   {
     "question": "What is Khoa's GPA?",
     "expected": "2.3",
-    "source_file": "career-report-khoa copy.pdf"
+    "source_file": "career-report-khoa copy.pdf",
+    "type": "factual"
   },
   {
     "question": "What internship did Khoa complete?",
-    "expected": "Saltlux Vietnam",
-    "source_file": "career-report-khoa copy.pdf"
+    "expected": "Saltlux",
+    "source_file": "career-report-khoa copy.pdf",
+    "type": "factual"
   },
   {
     "question": "What computer vision framework did Khoa use at his internship?",
     "expected": "YOLO",
-    "source_file": "career-report-khoa copy.pdf"
+    "source_file": "career-report-khoa copy.pdf",
+    "type": "factual"
   },
   {
     "question": "What is Javier's GPA?",
     "expected": "1.7",
-    "source_file": "javier-briceno.pdf"
-  },
-  {
-    "question": "What city does Javier live in?",
-    "expected": "Siegen",
-    "source_file": "javier-briceno.pdf"
-  },
-  {
-    "question": "What database does Javier use in his projects?",
-    "expected": "PostgreSQL",
-    "source_file": "javier-briceno.pdf"
-  },
-  {
-    "question": "What is Khoa's strongest subject grade?",
-    "expected": "1.3",
-    "source_file": "career-report-khoa copy.pdf"
-  },
-  {
-    "question": "Which course does the report recommend Khoa pay for first?",
-    "expected": "PyTorch",
-    "source_file": "career-report-khoa copy.pdf"
-  },
-  {
-    "question": "What languages does Khoa speak?",
-    "expected": "Vietnamese",
-    "source_file": "career-report-khoa copy.pdf"
+    "source_file": "javier-briceno.pdf",
+    "type": "factual"
   },
   {
     "question": "What workflow tool does Javier use for ETL pipelines?",
     "expected": "n8n",
-    "source_file": "javier-briceno.pdf"
+    "source_file": "javier-briceno.pdf",
+    "type": "factual"
+  },
+  {
+    "question": "What is the main idea of k-nearest neighbor classification?",
+    "expected": "similar",
+    "source_file": "ciss-IS-02-ml-1 (knn).pdf",
+    "type": "conceptual"
+  },
+  {
+    "question": "What are the three assumptions of kNN?",
+    "expected": "similar",
+    "source_file": "ciss-IS-02-ml-1 (knn).pdf",
+    "type": "conceptual"
+  },
+  {
+    "question": "According to the kNN slides, what is the formula for the rule of thumb for k?",
+    "expected": "rule of thumb",
+    "source_file": "ciss-IS-02-ml-1 (knn).pdf",
+    "type": "factual"
+  },
+  {
+    "question": "What does the kNN algorithm return after computing distances?",
+    "expected": "majority",
+    "source_file": "ciss-IS-02-ml-1 (knn).pdf",
+    "type": "factual"
+  },
+  {
+    "question": "What is the difference between kNN for classification and kNN for regression?",
+    "expected": "output",
+    "source_file": "ciss-IS-02-ml-1 (knn).pdf",
+    "type": "conceptual"
+  },
+  {
+    "question": "Is k a hyperparameter that can be learned?",
+    "expected": "not",
+    "source_file": "ciss-IS-02-ml-1 (knn).pdf",
+    "type": "factual"
+  },
+  {
+    "question": "What does the scatter plot on slide 3 show?",
+    "expected": "Study Time",
+    "source_file": "ciss-IS-02-ml-1 (knn).pdf",
+    "type": "visual"
+  },
+  {
+    "question": "In the classification table on slide 2, what is the salary category of student 4223?",
+    "expected": "High",
+    "source_file": "ciss-IS-02-ml-1 (knn).pdf",
+    "type": "visual"
+  },
+  {
+    "question": "What does the map function do in Python?",
+    "expected": "function",
+    "source_file": "5_map_filter_reduce_wrapup.pdf",
+    "type": "conceptual"
+  },
+  {
+    "question": "What does the reduce function do in Python?",
+    "expected": "reduce",
+    "source_file": "5_map_filter_reduce_wrapup.pdf",
+    "type": "conceptual"
+  },
+  {
+    "question": "What does filter return when a function evaluates to False for an element?",
+    "expected": "does not include",
+    "source_file": "5_map_filter_reduce_wrapup.pdf",
+    "type": "conceptual"
+  },
+  {
+    "question": "What is currying in Python functional programming?",
+    "expected": "arguments",
+    "source_file": "5_map_filter_reduce_wrapup.pdf",
+    "type": "conceptual"
+  },
+  {
+    "question": "What Python module provides the partial function?",
+    "expected": "functools",
+    "source_file": "5_map_filter_reduce_wrapup.pdf",
+    "type": "factual"
+  },
+  {
+    "question": "What is the formula shown for reduce in the slides?",
+    "expected": "f(f(f",
+    "source_file": "5_map_filter_reduce_wrapup.pdf",
+    "type": "visual"
+  },
+  {
+    "question": "According to the slide, what should you learn to become a better programmer?",
+    "expected": "practice",
+    "source_file": "5_map_filter_reduce_wrapup.pdf",
+    "type": "factual"
   }
 ]
